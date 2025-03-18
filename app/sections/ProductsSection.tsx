@@ -50,7 +50,7 @@ export default function ProductsSection() {
     </Drawer>
         </div>
         <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-2">
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"
@@ -59,7 +59,7 @@ export default function ProductsSection() {
               onClick={() => console.log("Product clicked")}
             />
           </div>  
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"
@@ -68,7 +68,7 @@ export default function ProductsSection() {
               onClick={() => console.log("Product clicked")}
             />
           </div>  
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"
@@ -77,7 +77,7 @@ export default function ProductsSection() {
               onClick={() => console.log("Product clicked")}
             />
           </div>  
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"
@@ -86,7 +86,7 @@ export default function ProductsSection() {
               onClick={() => console.log("Product clicked")}
             />
           </div>  
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"
@@ -95,7 +95,7 @@ export default function ProductsSection() {
               onClick={() => console.log("Product clicked")}
             />
           </div>  
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"
@@ -104,7 +104,7 @@ export default function ProductsSection() {
               onClick={() => console.log("Product clicked")}
             />
           </div>  
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"
@@ -113,7 +113,7 @@ export default function ProductsSection() {
               onClick={() => console.log("Product clicked")}
             />
           </div>  
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"
@@ -122,7 +122,7 @@ export default function ProductsSection() {
               onClick={() => console.log("Product clicked")}
             />
           </div>  
-          <div className="h-auto rounded bg-blue-100 w-full">
+          <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"
               title="High-Quality Wireless Headphones with Noise Cancellation"

@@ -25,7 +25,7 @@ export default function ProductCard({
 
   return (
     <Card
-      className="w-full cursor-pointer transition-transform hover:scale-105 shadow-none border-none p-0"
+      className="w-full cursor-pointer transition-transform hover:scale-105 shadow-none border-none p-0 gap-[10px]"
       onClick={onClick}
     >
       {/* Image Wrapper with Background Color */}
@@ -59,12 +59,12 @@ export default function ProductCard({
       </div>
 
       {/* Card Content */}
-      <CardContent className="p-2">
+      <CardContent className="px-2 pb-2">
         {/* Product Title (Truncated) */}
         <p className="text-sm font-medium truncate">{title}</p>
 
         {/* Price */}
-        <p className="text-lg font-semibold text-green-600">${price}</p>
+        <p className="text-lg font-semibold text-primary">${price}</p>
       </CardContent>
     </Card>
   );
