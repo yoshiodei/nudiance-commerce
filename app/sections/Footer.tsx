@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="p-[50px] mt-5">
+    <footer className="p-[50px] mt-5 bg-slate-300">
       <div>
         
         <div>
@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
 
       <div>
-        All rights reserved. Nudiance 2025
+        <p className="text-center">All rights reserved. Nudiance 2025</p>
       </div>
     </footer>
   )

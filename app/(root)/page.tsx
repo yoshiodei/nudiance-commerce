@@ -4,6 +4,7 @@ import HorizontalAds from "@/components/ads/HorizontalAds"
 import HeroSection from "../sections/HeroSection";
 import CategoriesSection from "../sections/CategoriesSection";
 import ProductsSection from "../sections/ProductsSection";
+import Footer from "../sections/Footer";
 
 export default function Main() {
   return (
@@ -12,6 +13,7 @@ export default function Main() {
       <HeroSection />   
       <CategoriesSection />
       <ProductsSection />
+      <Footer />
     </div>  
   );
 }

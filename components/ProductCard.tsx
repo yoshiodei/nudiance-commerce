@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface ProductCardProps {
   image: string;
@@ -19,14 +20,16 @@ export default function ProductCard({
   title,
   price,
   badgeText,
-  onClick,
+  // onClick,
 }: ProductCardProps) {
   const [liked, setLiked] = useState(false);
+
+  const route = useRouter();
 
   return (
     <Card
       className="w-full cursor-pointer transition-transform hover:scale-105 shadow-none border-none p-0 gap-[10px]"
-      onClick={onClick}
+      onClick={() => route.push("/product/123")}
     >
       {/* Image Wrapper with Background Color */}
       <div className="relative w-full h-[150px] bg-gray-100 flex items-center justify-center rounded-lg overflow-hidden">

@@ -49,7 +49,7 @@ export default function ProductsSection() {
       </DrawerContent>
     </Drawer>
         </div>
-        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-2">
+        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 xl:gap-5 lg:gap-4 sm:gap-3 gap-2">
           <div className="h-auto rounded w-full">
             <ProductCard
               image="https://via.placeholder.com/200"

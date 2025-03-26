@@ -2,15 +2,15 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { Button } from './ui/button'
-import { IoSearch } from 'react-icons/io5';
-import { Input } from './ui/input';
+// import { Button } from './ui/button'
+// import { IoSearch } from 'react-icons/io5';
+// import { Input } from './ui/input';
 import { FiHeart as Wishlist } from 'react-icons/fi';
 import { FaRegBell as Notifications } from 'react-icons/fa6';
 import { LuUserRound as Profile } from 'react-icons/lu';
 import { IoChatboxEllipsesOutline as Chats } from 'react-icons/io5';
 
-import DisplayNavButtons from './DisplayNavButtons';
+// import DisplayNavButtons from './DisplayNavButtons';
 // import { Button } from "@/components/ui/button"
 // import { Input } from "@/components/ui/input"
 import {
@@ -26,23 +26,26 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import DisplayNavButtons from '@/components/DisplayNavButtons';
+import { Button } from '@/components/ui/button';
+// import { Input } from '@/components/ui/input';
 
-export default function Navbar() {
+export default function ChatNav() {
   const [open, setOpen] = useState(false);
-  const router = useRouter();
+    const router = useRouter();
+    
+      const handleClose = (tab: string ) => {
+        if(tab === 'sell-now'){
+          router.push(`/${tab}`);
+        }
+        if(tab === 'messages'){
+          router.push(`/profile/messages/098765`);
+        } else {
+          router.push(`/profile/id/${tab}`);
+        }
   
-    const handleClose = (tab: string ) => {
-      if(tab === 'sell-now'){
-        router.push(`/${tab}`);
-      }
-      if(tab === 'messages'){
-        router.push(`/profile/messages/098765`);
-      } else {
-        router.push(`/profile/id/${tab}`);
-      }
-
-      setOpen(false);
-    };
+        setOpen(false);
+      };
 
   return (
     <div className="w-full flex justify-center min-h-[10vh] bg-primary">
@@ -62,7 +65,7 @@ export default function Navbar() {
             </Link>  
           </div>
           <div className="flex-1 flex justify-center 2xl:block xl:block hidden">
-            <div className="h-[2.3em] rounded w-[400px] bg-white relative">
+            {/* <div className="h-[2.3em] rounded w-[400px] bg-white relative">
               <Button className="absolute h-[2.1em] w-auto px-5 rounded right-[0.3em] top-[0.3em] flex items-center">
                   <IoSearch className="text-white" />
                   <p className="leading none">Search</p>
@@ -72,7 +75,7 @@ export default function Navbar() {
                 className="w-full h-full rounded ps-2 pe-[100px]" 
                 placeholder="I am looking for..."
               />
-            </div>  
+            </div>   */}
           </div>
           <div className="flex-1 flex items-center justify-end gap-[15px] sm:flex hidden">
             <DisplayNavButtons />   
@@ -117,22 +120,6 @@ export default function Navbar() {
         </SheetFooter>
       </SheetContent>
             </Sheet>
-          </div>
-        </div>
-
-        <div className="flex items-center h-[10vh] bg-primary border-t border-slate-100 2xl:hidden xl:hidden block w-full">
-          <div className="flex-1 flex justify-center">
-            <div className="h-[2.3em] rounded sm:w-[400px] w-full bg-white relative">
-              <Button className="absolute h-[2.1em] w-auto px-5 rounded right-[0.3em] top-[0.3em] flex items-center">
-                  <IoSearch className="text-white" />
-                  {/* <p className="leading none">Search</p> */}
-              </Button>
-              <Input
-                type="text"
-                className="w-full h-full rounded ps-2 pe-[100px]" 
-                placeholder="I am looking for..."
-              />
-            </div>  
           </div>
         </div>
 

@@ -6,9 +6,12 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { LuUserRound } from 'react-icons/lu';
 import { MdLogout } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 export default function ProfileButton() {
   const [open, setOpen] = useState(false);
+
+  const router = useRouter();
 
   return (
     <TooltipProvider>
@@ -34,7 +37,7 @@ export default function ProfileButton() {
         </Tooltip>
 
         <DropdownMenuContent align="center" side="bottom">
-          <DropdownMenuItem className="cursor-pointer" onSelect={() => alert("Option 1 clicked")}>
+          <DropdownMenuItem className="cursor-pointer" onSelect={() => router.push(`/profile/id/posts`)}>
             <LuUserRound className="text-primary" />
             <p>My Account</p>
           </DropdownMenuItem>
