@@ -29,11 +29,12 @@ import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState('');
   const router = useRouter();
   
     const handleClose = (tab: string ) => {
       if(tab === 'sell-now'){
-        router.push(`/${tab}`);
+        router.push(`/sellnow/select-category`);
       }
       if(tab === 'messages'){
         router.push(`/profile/messages/098765`);
@@ -63,11 +64,16 @@ export default function Navbar() {
           </div>
           <div className="flex-1 flex justify-center 2xl:block xl:block hidden">
             <div className="h-[2.3em] rounded w-[400px] bg-white relative">
-              <Button className="absolute h-[2.1em] w-auto px-5 rounded right-[0.3em] top-[0.3em] flex items-center">
+              <Button
+                onClick={() => router.push(`search/${search}`) } 
+                className="absolute h-[2.1em] w-auto px-5 rounded right-[0.3em] top-[0.3em] flex items-center"
+              >
                   <IoSearch className="text-white" />
                   <p className="leading none">Search</p>
               </Button>
               <Input
+                value={search}
+                onChange={(e:React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
                 type="text"
                 className="w-full h-full rounded ps-2 pe-[100px]" 
                 placeholder="I am looking for..."

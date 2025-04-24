@@ -32,14 +32,14 @@ export default function Profile() {
           </div> 
 
           <div className="lg:flex md:grid sm:grid grid-cols-2 flex flex-col gap-2 py-3">
-            <button onClick={() => setTab('posts')} className="cursor-pointer hover:bg-slate-200 w-full border border-slate-300 rounded flex items-center sm:justify-between justify-center h-[2.8em] px-5 font-semibold">
+            <button onClick={() => setTab('posts')} className={`${tab === "posts" ? "bg-primary text-white hover:bg-primary hover:text-white" : "hover:bg-slate-200"} cursor-pointer w-full border border-slate-300 rounded flex items-center sm:justify-between justify-center h-[2.8em] px-5 font-semibold`}>
               <div className="flex gap-4 items-center justify-start">
                 <Posts />
                 <h2>My Posts</h2>
               </div>
               <Arrow className="lg:block hidden" />
             </button>
-            <button onClick={() => setTab('notifications')} className="cursor-pointer hover:bg-slate-200 w-full border border-slate-300 rounded flex items-center sm:justify-between justify-center h-[2.8em] px-5 font-semibold">
+            <button onClick={() => setTab('notifications')} className={`${tab === "notifications" ? "bg-primary text-white hover:bg-primary hover:text-white" : "hover:bg-slate-200"} cursor-pointer w-full border border-slate-300 rounded flex items-center sm:justify-between justify-center h-[2.8em] px-5 font-semibold`}>
               <div className="flex gap-4 items-center justify-start">
                 <Notifications />
                 <h2>Notifications</h2>
@@ -53,7 +53,7 @@ export default function Profile() {
               </div>
               <Arrow className="lg:block hidden" />
             </button>
-            <button onClick={() => setTab('wishlist')} className="cursor-pointer hover:bg-slate-200 w-full border border-slate-300 rounded flex items-center sm:justify-between justify-center h-[2.8em] px-5 font-semibold">
+            <button onClick={() => setTab('wishlist')} className={`${tab === "wishlist" ? "bg-primary text-white hover:bg-primary hover:text-white" : "hover:bg-slate-200"} cursor-pointer w-full border border-slate-300 rounded flex items-center sm:justify-between justify-center h-[2.8em] px-5 font-semibold`}>
               <div className="flex gap-4 items-center justify-start">
                 <Wishlist />
                 <h2>Wishlist</h2>

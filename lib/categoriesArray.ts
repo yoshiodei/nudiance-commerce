@@ -1,0 +1,1 @@
+export const categoriesArray = ['electronics', 'vehicles', 'clothing', 'toys', 'home', 'fitness', 'services', 'health', 'books']

@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import { IoFilterSharp } from "react-icons/io5";
 import {
@@ -14,10 +16,15 @@ import {
 
 import React, {useState} from 'react'
 import ProductCard from '@/components/ProductCard';
+import { useParams } from 'next/navigation';
 
-export default function ProductsSection() {
+export default function SearchProductsSection() {
 
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000])
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
+  const {search} = useParams();
+
+  
+  
 
   // const handlePriceChange = (range: number[]) => {
   //   const updatedRange: [number, number] = [range[0], range[1]]
@@ -30,7 +37,7 @@ export default function ProductsSection() {
     <div className="w-full flex justify-center mt-5">
       <div className="h-full xl:w-[1400px] sm:px-[50px] px-[5vw] w-full">
         <div className="flex justify-between items-center">
-          <h1 className="font-bold sm:text-[1.2em] text-[1em] sm:py-5 py-[20px]">Explore Products</h1>
+          <h1 className="font-bold sm:text-[1.2em] text-[1em] sm:py-5 py-[20px]">Search Results For &ldquo;{search}&rdquo;</h1>
           <Drawer>
       <DrawerTrigger asChild>
           <Button className="bg-slate-200 h-[2.5em] hover:text-white text-slate-700">
